@@ -1,86 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Image Gallery | SNEH International School</title>
-    <link rel="stylesheet" href="style(imageGallery).css">
-    
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-</head>
-<body>
-    <header class="header" id = "home">
-        <img src="Assets/Logo/SNEH_logo.png" alt="Sneh International" class="logo left-logo">
-        <img src="Assets/Logo/Tinkerlab.png" alt="ATAL Tinker Lab" class="logo center-logo">
-        <img src="Assets/Logo/Aim.png" alt="ATAL Innovation Mission" class="logo right-logo">
-    </header>
 
-    <div class="heading">
-        <h1>Image Gallery</h1>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Image Gallery | SNEH International School</title>
+  <link rel="stylesheet" href="style(imageGallery).css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+</head>
+
+<body>
+  <header class="header" id="home">
+    <img src="Assets/Logo/SNEH_logo.png" alt="Sneh International" class="logo left-logo">
+    <img src="Assets/Logo/Tinkerlab.png" alt="ATAL Tinker Lab" class="logo center-logo">
+    <img src="Assets/Logo/Aim.png" alt="ATAL Innovation Mission" class="logo right-logo">
+  </header>
+
+  <div class="heading">
+    <h1>Image Gallery</h1>
+  </div>
+  <div class="description">
+    <p>SNEH International School successfully organized the Winter Camp - Minecraft Hackathon from January 9-14, 2025.
+      The four-day event, themed "Survival Innovation," aimed to foster creativity, technology, and innovation among
+      students.
+      The event was inaugurated by esteemed guests, including Regional Mentor Ms. Viji Sridhar, Nodal Officer Ms. Neha
+      Jain, Director Ms. Kamesh Jacob, and Director Strategic Planning Ms. Alka Mathur. The hackathon commenced with a
+      motivational workshop by Er. Rajneesh Singh, Senior STEM Innovation Engineer, who guided students through advanced
+      Minecraft concepts, redstone engineering, and collaborative teamwork. Subsequent days featured thrilling
+      challenges, including Parkour, Mob Arena, and Base Design Building, which encouraged participants to think
+      creatively, work together, and push their problem-solving skills. 9 teams participated, with 3 teams winning
+      trophies and all participants receiving certificates. Renowned mentors and judges, including Ms. Viji Sridhar and
+      Dr. Neha Jain, guided and evaluated the students. The event concluded with an insightful session, encouraging
+      students to embrace innovation and explore technology.</p>
+  </div>
+  <section class="image-gallery">
+    <div class="image-card">
+      <img src="Assets/Image/ATL community1.jpg" alt="Image 1" class="gallery-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="image-card">
+      <img src="Assets/Image/ATL community1.jpg" alt="Image 2" class="gallery-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="image-card">
+      <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="image-card">
+      <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="image-card">
+      <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="image-card">
+      <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="image-card">
+      <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
+    </div>
+    <div class="image-card">
+      <img src="Assets/Image/mathexihibition.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
     </div>
 
-    <section class="image-gallery">
-        <div class="image-card">
-          <img src="Assets/Image/ATL community1.jpg" alt="Image 1" class="gallery-image" onclick="openLightbox(this.src)">
-        </div>
-        <div class="image-card">
-          <img src="Assets/Image/ATL community1.jpg" alt="Image 2" class="gallery-image" onclick="openLightbox(this.src)">
-        </div>
-        <div class="image-card">
-          <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
-        </div>
-        <div class="image-card">
-          <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
-        </div>
-        <div class="image-card">
-          <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
-        </div>
-        <div class="image-card">
-          <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
-        </div>
-        <div class="image-card">
-          <img src="Assets/Image/ATL community1.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
-        </div>
-        <div class="image-card">
-          <img src="Assets/Image/mathexihibition.jpg" alt="Image 3" class="gallery-image" onclick="openLightbox(this.src)">
-        </div>
+  </section>
 
-      </section>
-      
-      
-      <div id="lightbox" class="lightbox hidden">
-        <span class="close-btn" onclick="closeLightbox()">&times;</span>
-        <img id="lightbox-image" src="" alt="Large View">
-      </div>      
-    
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="social-media">
-                <span>Social Media :</span>
-                <a href="https://www.facebook.com/SNEHInternationalSchool/" target="_blank"><i
-                        class="fab fa-facebook"></i></a>
-                <a href="https://www.instagram.com/sneh_school_official/" target="_blank"><i
-                        class="fab fa-instagram"></i></a>
-                <a href="mailto:sneh@snehinternationalschool.com" target="_blank" aria-label="Send Email"><i
-                        class="fas fa-envelope"></i></a>
-                <a href="https://www.youtube.com/@snehinternationalschool4998" target="_blank"><i
-                        class="fab fa-youtube"></i></a>
-            </div>
-            <div class="footer-links">
-                <a href="https://aim.gov.in/atl.php">About ATL</a>
-                <a href="#disclaimer">Disclaimer</a>
-                <a href="#terms">Terms & Conditions</a>
-                <a href="#privacy">Privacy Policy</a>
-                <a href="#contact">Contact Us</a>
-            </div>
-        </div>
-        <div class="copyright">
-            Copyright &copy; 2025 ATL Tinker Lab | All rights reserved
-        </div>
-    </footer>
+  <div id="lightbox" class="lightbox hidden">
+    <span class="close-btn" onclick="closeLightbox()">&times;</span>
+    <img id="lightbox-image" src="" alt="Large View">
+  </div>
 
-    <script src="script.js"></script>
+
+
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="social-media">
+        <span>Social Media :</span>
+        <a href="https://www.facebook.com/SNEHInternationalSchool/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://www.instagram.com/sneh_school_official/" target="_blank"><i class="fab fa-instagram"></i></a>
+        <a href="mailto:sneh@snehinternationalschool.com" target="_blank" aria-label="Send Email"><i
+            class="fas fa-envelope"></i></a>
+        <a href="https://www.youtube.com/@snehinternationalschool4998" target="_blank"><i
+            class="fab fa-youtube"></i></a>
+      </div>
+      <div class="footer-links">
+        <a href="https://aim.gov.in/atl.php">About ATL</a>
+        <a href="#disclaimer">Disclaimer</a>
+        <a href="#terms">Terms & Conditions</a>
+        <a href="#privacy">Privacy Policy</a>
+        <a href="#contact">Contact Us</a>
+      </div>
+    </div>
+    <div class="copyright">
+      Copyright &copy; 2025 ATL Tinker Lab | All rights reserved
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 
 
 </body>
+
 </html>
