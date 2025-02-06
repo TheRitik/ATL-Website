@@ -3,11 +3,14 @@ import express from "express";
 import connectDb from "./db/connection.js";
 import router from "./routes/events.routes.js";
 import { Event } from "./models/events.model.js";
+import cors from "cors";
 dotenv.config({
   path: "./env",
 });
 
+
 const app = express();
+app.use(cors());
 
 (async () => {
   const allEvents = await Event.find();
