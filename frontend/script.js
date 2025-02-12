@@ -57,7 +57,7 @@ document.addEventListener('DOMContentLoaded', () => {
   async function fetchEvents() {
     try {
         // Fetch data from the API
-        const response = await fetch('http://localhost:5000/api/events');
+        const response = await fetch('https://sneh-atl-website.onrender.com/api/events');
         const events = await response.json();
         console.log('API Response:', events);
 
@@ -143,3 +143,5 @@ async function fetchEventImages() {
 // Call the function
 fetchEventImages();
 });
+
+
