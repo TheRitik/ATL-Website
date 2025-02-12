@@ -104,7 +104,7 @@ async function fetchEventImages() {
   }
 
   try {
-      const response = await fetch(`http://localhost:5000/api/events/${eventId}`);
+      const response = await fetch(`https://sneh-atl-website.onrender.com/api/events/${eventId}`);
       const eventData = await response.json();
       console.log('Event Data:', eventData);
 
