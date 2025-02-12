@@ -3,7 +3,7 @@ import mongoose,{Schema} from "mongoose";
 const eventSchema = new Schema(
     {
         eventId:{
-            type: Number,
+            type: String,
             required: true,
             index: true,
         },
@@ -18,6 +18,10 @@ const eventSchema = new Schema(
         thumbnail:{
             type: String,
             required: true,
+        },
+        images: { 
+            type: [String], 
+            default: [], 
         },
     },
     {

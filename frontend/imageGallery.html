@@ -7,6 +7,16 @@
   <title>Image Gallery | SNEH International School</title>
   <link rel="stylesheet" href="style(imageGallery).css">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+  <script>
+    function openLightbox(imageSrc) {
+        document.getElementById("lightbox-image").src = imageSrc;
+        document.getElementById("lightbox").classList.remove("hidden");
+    }
+  
+    function closeLightbox() {
+        document.getElementById("lightbox").classList.add("hidden");
+    }
+  </script>
 </head>
 
 <body>

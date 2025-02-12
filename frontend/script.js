@@ -41,8 +41,8 @@ document.addEventListener('DOMContentLoaded', () => {
   updateCarousel();
 
   function openLightbox(imageSrc) {
-    const lightbox = document.getElementById("lightbox");
-    const lightboxImage = document.getElementById("lightbox-image");
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImage = document.getElementById('lightbox-image');
     lightboxImage.src = imageSrc;
     lightbox.classList.remove("hidden");
   }
@@ -78,7 +78,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
             // Add click event to "View More" button
             card.querySelector('.view-more-btn').onclick = () => {
-                window.location.href = `imageGallery.html?id=${event._id}`; // Redirect to gallery page
+                window.location.href = `imageGallery.html?eventId=${event.eventId}`; // Redirect to gallery page
             };
 
             // Append the card to the container
@@ -92,4 +92,54 @@ document.addEventListener('DOMContentLoaded', () => {
 // Call the function to load events when the page loads
 fetchEvents();
 
+
+async function fetchEventImages() {
+  // Get the eventId from the URL query parameter
+  const urlParams = new URLSearchParams(window.location.search);
+  const eventId = urlParams.get('eventId');
+
+  if (!eventId) {
+      console.error('Event ID not found in URL');
+      return;
+  }
+
+  try {
+      const response = await fetch(`http://localhost:5000/api/events/${eventId}`);
+      const eventData = await response.json();
+      console.log('Event Data:', eventData);
+
+      // Update the gallery heading and description dynamically
+      document.querySelector('.heading h1').textContent = eventData.title || 'Event Gallery';
+      document.querySelector('.description p').textContent = eventData.description || 'No description available.';
+
+      // Populate the image gallery
+      const galleryContainer = document.querySelector('.image-gallery');
+      galleryContainer.innerHTML = ''; // Clear any existing images
+
+      if (eventData.images && eventData.images.length > 0) {
+          eventData.images.forEach(imageSrc => {
+              const imageCard = document.createElement('div');
+              imageCard.classList.add('image-card');
+
+              const imgElement = document.createElement('img');
+              imgElement.src = imageSrc;
+              imgElement.alt = 'Event Image';
+              imgElement.classList.add('gallery-image');
+              imgElement.onclick = () => openLightbox(imageSrc); // Open in lightbox on click
+
+              imageCard.appendChild(imgElement);
+              galleryContainer.appendChild(imageCard);
+          });
+      } else {
+          const noImagesMessage = document.createElement('p');
+          noImagesMessage.textContent = 'No images available for this event.';
+          galleryContainer.appendChild(noImagesMessage);
+      }
+  } catch (err) {
+      console.error('Error fetching event data:', err);
+  }
+}
+
+// Call the function
+fetchEventImages();
 });
